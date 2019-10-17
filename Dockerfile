@@ -1,11 +1,12 @@
 FROM ruby:2.6.5
 
 ENV LC_ALL=C.UTF-8
-ENV APP /app
-RUN mkdir $APP
-WORKDIR $APP
+RUN groupadd -r appgroup && useradd --no-log-init -r -g appgroup appuser
+RUN mkdir /app
+WORKDIR /app
+USER appuser
 
-COPY Gemfile Gemfile.lock $APP/
+COPY --chown=appuser:appgroup Gemfile Gemfile.lock ./
 RUN bundle install
 
-ADD . $APP
+COPY --chown=appuser:appgroup . .
