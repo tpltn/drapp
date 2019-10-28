@@ -7,6 +7,6 @@ WORKDIR /app
 USER appuser
 
 COPY --chown=appuser:appgroup Gemfile Gemfile.lock ./
-RUN bundle install
+RUN bundle install --without development test
 
 COPY --chown=appuser:appgroup . .
