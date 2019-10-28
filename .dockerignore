@@ -1,6 +1,9 @@
 /.dockerignore
 /.git/
 /.gitignore
+/.rspec
+/.rubocop.yml
 /Dockerfile
 /LICENSE
 /README.md
+/spec/
