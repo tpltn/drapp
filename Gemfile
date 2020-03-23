@@ -1,9 +1,19 @@
 source 'https://rubygems.org'
 
-ruby '2.6.5'
+ruby '2.7.0'
 
-gem 'blueprinter', '>= 0.20'
-gem 'roda', '>= 3.25'
+gem 'dry-types'
+
+# activesupport
+# dry-system
+# puma
+# sequel
+# sequel_pg
+# factory_bot
+# rack-test
+# simplecov
+# gem 'blueprinter'
+# gem 'roda'
 
 group :development, :test do
   gem 'rake', '>= 13.0', require: false

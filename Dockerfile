@@ -1,4 +1,4 @@
-FROM ruby:2.6.5
+FROM ruby:2.7.0
 
 ENV LC_ALL=C.UTF-8
 RUN groupadd -r appgroup && useradd --no-log-init -r -g appgroup appuser
