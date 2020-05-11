@@ -5,6 +5,6 @@ class Drapp < Dry::System::Container
 
   configure do |config|
     config.root = File.expand_path('..', __dir__)
-    config.env  = :test #ENV.fetch('ENV')
+    config.env  = :test # ENV.fetch('ENV')
   end
 end

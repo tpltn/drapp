@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
 
 require 'irb'
+
+require_relative '../system/boot'
+Drapp.finalize!
+
 IRB.start
