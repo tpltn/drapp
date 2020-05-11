@@ -1,6 +1,5 @@
 FROM ruby:2.7.1-alpine
 
-ENV LC_ALL=C.UTF-8
 RUN addgroup -S appgroup && adduser -S -G appgroup appuser
 RUN mkdir /app
 WORKDIR /app

@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 ruby '2.7.1'
 
-gem 'dry-types'
+gem 'dry-struct', '>= 1.3.0'
+gem 'dry-system', '>= 0.17'
+gem 'dry-types', '>= 1.4.0'
 
-# activesupport
-# dry-system
 # puma
 # sequel
 # sequel_pg

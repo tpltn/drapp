@@ -1,5 +1,12 @@
-Style/FrozenStringLiteralComment:
-  EnforcedStyle: never
+Layout/LineLength:
+  AutoCorrect: true
+  Max: 120
 
 Lint/SuppressedException:
   AllowComments: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
