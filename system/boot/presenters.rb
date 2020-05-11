@@ -1,6 +1,6 @@
-Drapp.boot(:outputs) do
+Drapp.boot(:presenters) do
   init do
-    Dir["#{Drapp.root}/core/outputs/**/*.rb"].sort.each { |file| require file }
+    Dir["#{Drapp.root}/core/presenters/**/*.rb"].sort.each { |file| require file }
   end
 
   start do

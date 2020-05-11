@@ -1,6 +1,6 @@
 require 'blueprinter'
 
-module Outputs
+module Presenters
   class Base < Blueprinter::Base
   end
 end

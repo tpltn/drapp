@@ -1,6 +1,6 @@
 require_relative 'base'
 
-module Outputs
+module Presenters
   class Order < Base
     field :id
     field :status
