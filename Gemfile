@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.7.0'
+ruby '2.7.1'
 
 gem 'dry-types'
 
@@ -16,9 +16,8 @@ gem 'dry-types'
 # gem 'roda'
 
 group :development, :test do
-  gem 'rake', '>= 13.0', require: false
-  gem 'rubocop', '>= 0.76', require: false
-  gem 'rubocop-rspec', '>= 1.36', require: false
+  gem 'rake', '>= 13.0.1', require: false
+  gem 'rubocop', '>= 0.83', require: false
 end
 
 group :test do

@@ -1,6 +1,7 @@
 /.dockerignore
 /.git/
 /.gitignore
+/.idea/
 /.rspec
 /.rubocop.yml
 /Dockerfile

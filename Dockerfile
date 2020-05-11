@@ -1,12 +1,13 @@
-FROM ruby:2.7.0
+FROM ruby:2.7.1-alpine
 
 ENV LC_ALL=C.UTF-8
-RUN groupadd -r appgroup && useradd --no-log-init -r -g appgroup appuser
+RUN addgroup -S appgroup && adduser -S -G appgroup appuser
 RUN mkdir /app
 WORKDIR /app
 USER appuser
+RUN bundle config set without development test
 
 COPY --chown=appuser:appgroup Gemfile Gemfile.lock ./
-RUN bundle install --without development test
+RUN bundle install --jobs=4
 
 COPY --chown=appuser:appgroup . .
