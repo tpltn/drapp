@@ -2,18 +2,10 @@ source 'https://rubygems.org'
 
 ruby '2.7.1'
 
+gem 'blueprinter', '>= 0.23.4'
 gem 'dry-struct', '>= 1.3.0'
 gem 'dry-system', '>= 0.17'
 gem 'dry-types', '>= 1.4.0'
-
-# puma
-# sequel
-# sequel_pg
-# factory_bot
-# rack-test
-# simplecov
-# gem 'blueprinter'
-# gem 'roda'
 
 group :development, :test do
   gem 'rake', '>= 13.0.1', require: false
