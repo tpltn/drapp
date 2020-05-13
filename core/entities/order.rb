@@ -7,6 +7,7 @@ module Entities
     attribute :id, Types::Strict::String
     attribute :status, STATUSES
     attribute :published_at, DATETIME
+    attribute :comment, Types::Strict::String.optional.default(nil)
 
     # class Order::Contact defines here
     attribute? :contact do
