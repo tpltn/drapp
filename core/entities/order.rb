@@ -6,13 +6,12 @@ module Entities
 
     attribute :id, Types::Strict::String
     attribute :status, STATUSES
-    attribute :published_at, DATETIME
+    # .optional makes type nullable
     attribute :comment, Types::Strict::String.optional.default(nil)
 
     # class Order::Contact defines here
     attribute? :contact do
-      # .optional makes type nullable
-      attribute :email, Types::Strict::String.optional.default(nil)
+      attribute :birthday, Types::Strict::DateTime.constructor(&:to_datetime).optional.default(nil)
     end
 
     # strict type check
@@ -21,7 +20,7 @@ module Entities
     # Types::Strict::Float
     # Types::Strict::Decimal
     #
-    # built-in coercion (int->float)
+    # built-in coercion (any->float)
     # Types::Coercible::Float
     #
     # Types::Strict::String.default { ''.freeze }

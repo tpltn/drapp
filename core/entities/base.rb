@@ -27,7 +27,5 @@ module Entities
     module Types
       include Dry.Types()
     end
-
-    DATETIME = Types::Strict::DateTime.constructor(&:to_datetime).optional.default(nil)
   end
 end

@@ -5,7 +5,9 @@ module Usecases
     class Create < Base
       def call(params)
         input = Inputs::Orders::Create.new.call(params)
-        order = Entities::Order.new(id: SecureRandom.uuid, status: 'pending_publication')
+        raise RuntimeError, input.errors if input.failure?
+
+        order = Entities::Order.new(id: SecureRandom.uuid, status: 'pending_publication', **input.to_h)
 
         Presenters::Order.render_as_hash(order)
       end
