@@ -3,15 +3,15 @@ RSpec.describe Gateways::Order do
 
   subject { described_class.new }
 
-  describe '#save' do
+  describe '#create' do
     it do
-      result = subject.save(order)
+      result = subject.create(order)
       expect(result).to eq order
     end
   end
 
   describe '#find_by_id' do
-    before(:each) { subject.save(order) }
+    before(:each) { subject.create(order) }
 
     it do
       result_explicit = subject.find_by_id(order.id)

@@ -11,7 +11,7 @@ module Usecases
 
         order = Entities::Order.new(id: SecureRandom.uuid, status: 'pending_publication', **input.to_h)
 
-        Presenters::Order.render_as_hash(order_gw.save(order))
+        Presenters::Order.render_as_hash(order_gw.create(order))
       end
     end
   end
